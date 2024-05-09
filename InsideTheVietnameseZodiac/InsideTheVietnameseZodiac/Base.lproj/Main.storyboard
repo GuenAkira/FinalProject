@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EjV-pk-F0c">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--List View Controller-->
+        <scene sceneID="AKN-H3-K4K">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="15T-ga-B90" customClass="ListViewController" customModule="InsideTheVietnameseZodiac" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="D8a-BN-3dy">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Epq-cD-z7r">
+                                <rect key="frame" x="0.0" y="56" width="393" height="759"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9Tm-qb-gaQ"/>
+                        <color key="backgroundColor" red="0.93333333330000001" green="0.72941176470000002" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="J1f-DG-4OI"/>
+                    <connections>
+                        <outlet property="tableView" destination="Epq-cD-z7r" id="Spc-Fw-4nf"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="toViewController" id="GV1-IG-0UF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fRW-Ue-fB6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3799.2366412213737" y="-551.4084507042254"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="InsideTheVietnameseZodiac" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PLEASE TYPE YOUR BIRTHYEAR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3jg-94-YwM">
+                                <rect key="frame" x="45" y="317" width="303.33333333333331" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.68235294120000001" green="0.0" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please type your birthyear range from 1900 to 2031" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AkP-pX-Z3B">
+                                <rect key="frame" x="22" y="349" width="348" height="34"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="HAPPY NEW YEAR!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SzD-5K-8Db">
+                                <rect key="frame" x="51" y="103" width="291" height="67"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                                <color key="textColor" red="0.68235294120000001" green="0.0" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dY9-oo-BC0">
+                                <rect key="frame" x="134" y="474" width="124" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.68235294120000001" green="0.0" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="SAVE"/>
+                                <connections>
+                                    <action selector="saveButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WVl-sr-7Cn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sNv-ba-Ekl">
+                                <rect key="frame" x="134" y="411" width="124" height="36"/>
+                                <color key="backgroundColor" red="0.68235294120000001" green="0.0" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="SEARCH"/>
+                                <connections>
+                                    <action selector="searchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MGe-5m-NMH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.93333333330000001" green="0.72941176470000002" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="sNv-ba-Ekl" firstAttribute="top" secondItem="AkP-pX-Z3B" secondAttribute="bottom" constant="29" id="0fb-St-SbE"/>
+                            <constraint firstItem="AkP-pX-Z3B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="22" id="2zV-oe-htu"/>
+                            <constraint firstItem="sNv-ba-Ekl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-0.5" id="8Hz-Q0-U3Z"/>
+                            <constraint firstItem="SzD-5K-8Db" firstAttribute="centerX" secondItem="3jg-94-YwM" secondAttribute="centerX" constant="-0.16666666666665719" id="ASD-9y-Fmk"/>
+                            <constraint firstItem="sNv-ba-Ekl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="8" id="L5I-et-KNl"/>
+                            <constraint firstItem="3jg-94-YwM" firstAttribute="centerX" secondItem="AkP-pX-Z3B" secondAttribute="centerX" constant="0.66666666666665719" id="LhJ-9T-JOp"/>
+                            <constraint firstItem="3jg-94-YwM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="RaE-31-hZM"/>
+                            <constraint firstItem="AkP-pX-Z3B" firstAttribute="top" secondItem="3jg-94-YwM" secondAttribute="bottom" constant="8" id="Ru6-0N-Uj6"/>
+                            <constraint firstItem="AkP-pX-Z3B" firstAttribute="centerX" secondItem="sNv-ba-Ekl" secondAttribute="centerX" id="Shf-C1-VDQ"/>
+                            <constraint firstItem="sNv-ba-Ekl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="134" id="cwg-RQ-OfR"/>
+                            <constraint firstItem="SzD-5K-8Db" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="47" id="hy9-lT-Agk"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="birthYear" value=""/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <navigationItem key="navigationItem" id="msd-i2-7vC"/>
+                    <connections>
+                        <outlet property="birthyearText" destination="AkP-pX-Z3B" id="ErW-Q2-YdT"/>
+                        <segue destination="Fio-oV-J4l" kind="show" identifier="toBuffaloController" id="cG3-6w-tIh"/>
+                        <segue destination="oBy-6A-TGT" kind="show" identifier="toTigerController" id="wqe-wU-0W8"/>
+                        <segue destination="vD2-Jf-tt3" kind="show" identifier="toCatController" id="O3m-wO-rcv"/>
+                        <segue destination="MKq-lc-8ra" kind="show" identifier="toDragonController" id="veH-Ze-tEo"/>
+                        <segue destination="4x5-ub-uMs" kind="show" identifier="toSnakeController" id="Qxi-6H-5Hd"/>
+                        <segue destination="VsQ-qv-RPM" kind="show" identifier="toHorseController" id="qq6-yy-76P"/>
+                        <segue destination="LAU-d7-o07" kind="show" identifier="toGoatController" id="e7c-zg-paS"/>
+                        <segue destination="YcK-hr-N9N" kind="show" identifier="toRoosterController" id="6h0-wG-Jan"/>
+                        <segue destination="vC5-dC-VQK" kind="show" identifier="toMonkeyController" id="tDH-gb-yM0"/>
+                        <segue destination="RAO-wd-PdD" kind="show" identifier="toDogController" id="XYW-7X-k1D"/>
+                        <segue destination="lzd-oc-uc1" kind="show" identifier="toPigController" id="Nsg-0Y-69Y"/>
+                        <segue destination="oZI-x8-eTG" kind="show" identifier="toRatController" id="gva-z0-uXD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4898.4732824427483" y="-551.4084507042254"/>
+        </scene>
+        <!--Horse Controller-->
+        <scene sceneID="nAI-jJ-2s3">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="VsQ-qv-RPM" customClass="HorseController" customModule="InsideTheVietnameseZodiac" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iQa-Vb-lyv">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="horse" translatesAutoresizingMaskIntoConstraints="NO" id="PNE-a9-wcM">
+                                <rect key="frame" x="76" y="103" width="240" height="216"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vietnamese Year of the Horse" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F3B-HS-3bF">
+                                <rect key="frame" x="7" y="327" width="379" height="79"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="79" id="6AT-er-QN0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
+                                <color key="textColor" red="0.68235294120000001" green="0.0" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6wU-Rg-YU6"/>
+                        <color key="backgroundColor" red="0.93333333330000001" green="0.72941176470000002" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6wU-Rg-YU6" firstAttribute="bottom" secondItem="F3B-HS-3bF" secondAttribute="bottom" constant="436" id="77t-Kt-NZ1"/>
+                            <constraint firstItem="F3B-HS-3bF" firstAttribute="leading" secondItem="iQa-Vb-lyv" secondAttribute="leadingMargin" constant="-9" id="GJh-sr-ipT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="F3B-HS-3bF" secondAttribute="trailing" constant="-9" id="IbY-ir-spe"/>
+                            <constraint firstItem="F3B-HS-3bF" firstAttribute="centerX" secondItem="PNE-a9-wcM" secondAttribute="centerX" id="Rxa-4t-h13"/>
+                            <constraint firstItem="F3B-HS-3bF" firstAttribute="top" secondItem="PNE-a9-wcM" secondAttribute="bottom" constant="8" id="XfA-pG-cut"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="0KA-lt-OsN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pCt-4V-2DL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3689.3129770992364" y="429.57746478873241"/>
+        </scene>
+        <!--Dog Controller-->
+        <scene sceneID="Sqd-qr-IWv">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="RAO-wd-PdD" customClass="DogController" customModule="InsideTheVietnameseZodiac" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yB5-ay-Dcg">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dog" translatesAutoresizingMaskIntoConstraints="NO" id="sLj-J5-bBP">
+                                <rect key="frame" x="76" y="103" width="240" height="216"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vietnamese Year of the Dog" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sms-0G-OBq">
+                                <rect key="frame" x="16" y="327" width="361" height="79"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
+                                <color key="textColor" red="0.68235294120000001" green="0.0" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="sJs-g6-tTL"/>
+                        <color key="backgroundColor" red="0.93333333330000001" green="0.72941176470000002" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wDN-us-tpP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sd4-UY-Qpr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6710.6870229007627" y="429.57746478873241"/>
+        </scene>
+        <!--Goat Controller-->
+        <scene sceneID="4Th-Hp-cPn">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="LAU-d7-o07" customClass="GoatController" customModule="InsideTheVietnameseZodiac" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4ov-pP-tgy">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="goat" translatesAutoresizingMaskIntoConstraints="NO" id="dwI-Bf-XG7">
+                                <rect key="frame" x="76" y="103" width="240" height="216"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vietnamese Year of the Goat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HF6-wX-Tg9">
+                                <rect key="frame" x="16" y="327" width="361" height="79"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
+                                <color key="textColor" red="0.68235294120000001" green="0.0" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ovc-Ul-QST"/>
+                        <color key="backgroundColor" red="0.93333333330000001" green="0.72941176470000002" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="phO-eW-cCW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eXC-9h-RUQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4393.1297709923665" y="429.57746478873241"/>
+        </scene>
+        <!--Pig Controller-->
+        <scene sceneID="FjQ-me-mMn">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="lzd-oc-uc1" customClass="PigController" customModule="InsideTheVietnameseZodiac" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IcC-XQ-Kb0">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pig" translatesAutoresizingMaskIntoConstraints="NO" id="2HC-D8-zKM">
+                                <rect key="frame" x="76" y="103" width="240" height="216"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vietnamese Year of the Pig" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HSm-JY-s0w">
+                                <rect key="frame" x="16" y="327" width="361" height="79"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
+                                <color key="textColor" red="0.68235294120000001" green="0.0" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="41W-Gv-0Z0"/>
+                        <color key="backgroundColor" red="0.93333333330000001" green="0.72941176470000002" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="RtS-vc-Ndc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZbJ-mN-Otg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7518.320610687023" y="429.57746478873241"/>
+        </scene>
+        <!--Monkey Controller-->
+        <scene sceneID="czd-yh-cPw">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="vC5-dC-VQK" customClass="MonkeyController" customModule="InsideTheVietnameseZodiac" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bbd-mD-XPd">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="monkey" translatesAutoresizingMaskIntoConstraints="NO" id="hRf-wT-c40">
+                                <rect key="frame" x="76" y="103" width="240" height="216"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vietnamese Year of the Monkey" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xj4-aH-ozi">
+                                <rect key="frame" x="16" y="327" width="361" height="79"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
+                                <color key="textColor" red="0.68235294120000001" green="0.0" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Sqb-Xf-TrE"/>
+                        <color key="backgroundColor" red="0.93333333330000001" green="0.72941176470000002" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ep8-hw-QaW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4P1-DJ-lTB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5147.3282442748086" y="429.57746478873241"/>
+        </scene>
+        <!--Rooster Controller-->
+        <scene sceneID="YPV-QD-4UB">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="YcK-hr-N9N" customClass="RoosterController" customModule="InsideTheVietnameseZodiac" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9tf-QM-p9E">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="rooster" translatesAutoresizingMaskIntoConstraints="NO" id="fqP-kV-aUk">
+                                <rect key="frame" x="76" y="103" width="240" height="216"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vietnamese Year of the Rooster" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AzP-5j-XxS">
+                                <rect key="frame" x="58.666666666666657" y="351" width="294.66666666666674" height="79"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="79" id="1oI-Qn-5D2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
+                                <color key="textColor" red="0.68235294120000001" green="0.0" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fyR-xx-kmP"/>
+                        <color key="backgroundColor" red="0.93333333330000001" green="0.72941176470000002" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="AzP-5j-XxS" firstAttribute="top" secondItem="fqP-kV-aUk" secondAttribute="bottom" constant="8" id="01L-Ko-1o9"/>
+                            <constraint firstItem="fyR-xx-kmP" firstAttribute="bottom" secondItem="AzP-5j-XxS" secondAttribute="bottom" constant="412" id="1rm-o7-9Mh"/>
+                            <constraint firstItem="fqP-kV-aUk" firstAttribute="top" secondItem="fyR-xx-kmP" secondAttribute="top" id="qL6-hv-gfX"/>
+                            <constraint firstItem="fqP-kV-aUk" firstAttribute="centerX" secondItem="AzP-5j-XxS" secondAttribute="centerX" constant="-5.0000000000000284" id="tjU-Ud-z48"/>
+                            <constraint firstItem="fqP-kV-aUk" firstAttribute="leading" secondItem="fyR-xx-kmP" secondAttribute="leading" constant="76" id="zz7-Db-ZI0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="uqX-hF-UUA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zVY-WB-BCq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5935.1145038167933" y="429.57746478873241"/>
+        </scene>
+        <!--Dragon Controller-->
+        <scene sceneID="un5-z2-57M">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="MKq-lc-8ra" customClass="DragonController" customModule="InsideTheVietnameseZodiac" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j0V-VL-Tid">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dragon" translatesAutoresizingMaskIntoConstraints="NO" id="fha-lg-5NS">
+                                <rect key="frame" x="76" y="103" width="240" height="216"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vietnamese Year of the Dragon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BxR-EK-Q2x">
+                                <rect key="frame" x="16" y="327" width="361" height="79"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
+                                <color key="textColor" red="0.68235294120000001" green="0.0" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aCr-Ze-xR4"/>
+                        <color key="backgroundColor" red="0.93333333330000001" green="0.72941176470000002" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bUW-af-KLH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NWI-kD-PKy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="9582.442748091602" y="-266.19718309859155"/>
+        </scene>
+        <!--Snake Controller-->
+        <scene sceneID="f4z-CD-D26">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="4x5-ub-uMs" customClass="SnakeController" customModule="InsideTheVietnameseZodiac" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="03A-oe-rT0">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="snake" translatesAutoresizingMaskIntoConstraints="NO" id="wfo-bk-mYZ">
+                                <rect key="frame" x="76" y="103" width="240" height="216"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vietnamese Year of the Snake" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TJi-Vw-RuT">
+                                <rect key="frame" x="16" y="327" width="361" height="79"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
+                                <color key="textColor" red="0.68235294120000001" green="0.0" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5NF-Qn-b0w"/>
+                        <color key="backgroundColor" red="0.93333333330000001" green="0.72941176470000002" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="76R-aO-BoX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YGz-sm-ZKf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="10295.419847328243" y="-266.19718309859155"/>
+        </scene>
+        <!--Cat Controller-->
+        <scene sceneID="cLj-Fb-adF">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="vD2-Jf-tt3" customClass="CatController" customModule="InsideTheVietnameseZodiac" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WAj-Ha-Ma6">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cat" translatesAutoresizingMaskIntoConstraints="NO" id="LdO-NR-eli">
+                                <rect key="frame" x="76" y="103" width="240" height="216"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vietnamese Year of the Cat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kSK-Zf-Ls3">
+                                <rect key="frame" x="16" y="327" width="361" height="79"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
+                                <color key="textColor" red="0.68235294120000001" green="0.0" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aFJ-Yb-Lm9"/>
+                        <color key="backgroundColor" red="0.93333333330000001" green="0.72941176470000002" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="pPq-PN-eyl"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UNO-Jr-VbG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8793.1297709923656" y="-266.19718309859155"/>
+        </scene>
+        <!--Buffalo Controller-->
+        <scene sceneID="brD-b2-C2Q">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="Fio-oV-J4l" customClass="BuffaloController" customModule="InsideTheVietnameseZodiac" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rJy-C4-JEF">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="buffalo" translatesAutoresizingMaskIntoConstraints="NO" id="4vR-Fm-0ao">
+                                <rect key="frame" x="76" y="103" width="240" height="216"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vietnamese Year of the Buffalo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W6u-9w-sff">
+                                <rect key="frame" x="61.666666666666657" y="351" width="288.66666666666674" height="79"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="79" id="WnF-vG-36M"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
+                                <color key="textColor" red="0.68235294120000001" green="0.0" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Md4-v3-5VL"/>
+                        <color key="backgroundColor" red="0.93333333330000001" green="0.72941176470000002" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Md4-v3-5VL" firstAttribute="bottom" secondItem="W6u-9w-sff" secondAttribute="bottom" constant="412" id="VUR-1m-ilM"/>
+                            <constraint firstItem="4vR-Fm-0ao" firstAttribute="top" secondItem="Md4-v3-5VL" secondAttribute="top" id="Y9e-Mo-hcn"/>
+                            <constraint firstItem="4vR-Fm-0ao" firstAttribute="leading" secondItem="Md4-v3-5VL" secondAttribute="leading" constant="76" id="dpW-QE-uNV"/>
+                            <constraint firstItem="4vR-Fm-0ao" firstAttribute="centerX" secondItem="W6u-9w-sff" secondAttribute="centerX" constant="-5.0000000000000284" id="ksC-jc-jQf"/>
+                            <constraint firstItem="W6u-9w-sff" firstAttribute="top" secondItem="4vR-Fm-0ao" secondAttribute="bottom" constant="8" id="uga-gv-up7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ypA-kI-Qot"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Cs-bu-Z0L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7173.2824427480909" y="-266.19718309859155"/>
+        </scene>
+        <!--Tiger Controller-->
+        <scene sceneID="zuO-r3-Bhf">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="oBy-6A-TGT" customClass="TigerController" customModule="InsideTheVietnameseZodiac" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tZm-xI-Sqp">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="tiger" translatesAutoresizingMaskIntoConstraints="NO" id="dsE-48-CHo">
+                                <rect key="frame" x="76" y="103" width="240" height="216"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vietnamese Year of the Tiger" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GmC-Ey-huv">
+                                <rect key="frame" x="71" y="351" width="270" height="79"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="79" id="zaF-dF-bAn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
+                                <color key="textColor" red="0.68235294120000001" green="0.0" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="byV-84-wER"/>
+                        <color key="backgroundColor" red="0.93333333330000001" green="0.72941176470000002" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dsE-48-CHo" firstAttribute="top" secondItem="byV-84-wER" secondAttribute="top" id="Gex-VV-bwn"/>
+                            <constraint firstItem="byV-84-wER" firstAttribute="bottom" secondItem="GmC-Ey-huv" secondAttribute="bottom" constant="412" id="IjN-gH-aBG"/>
+                            <constraint firstItem="dsE-48-CHo" firstAttribute="centerX" secondItem="GmC-Ey-huv" secondAttribute="centerX" constant="-5" id="hrP-4T-3vP"/>
+                            <constraint firstItem="GmC-Ey-huv" firstAttribute="top" secondItem="dsE-48-CHo" secondAttribute="bottom" constant="8" id="iob-Z5-y72"/>
+                            <constraint firstItem="dsE-48-CHo" firstAttribute="leading" secondItem="byV-84-wER" secondAttribute="leading" constant="76" id="too-f8-PGd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Dfz-Ib-wLm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G1Y-fc-hSf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7927.480916030534" y="-266.19718309859155"/>
+        </scene>
+        <!--Rat Controller-->
+        <scene sceneID="3vw-ge-Qq1">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="oZI-x8-eTG" customClass="RatController" customModule="InsideTheVietnameseZodiac" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LM5-iC-xR3">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rat" translatesAutoresizingMaskIntoConstraints="NO" id="y12-1q-PGy">
+                                <rect key="frame" x="76" y="103" width="240" height="216"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vietnamese Year of the Rat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqe-Kg-MVw">
+                                <rect key="frame" x="16" y="327" width="361" height="79"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
+                                <color key="textColor" red="0.68235294120000001" green="0.0" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="sUe-sA-6RB"/>
+                        <color key="backgroundColor" red="0.93333333330000001" green="0.72941176470000002" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="kjq-w0-53r"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="74h-x5-NSf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6448.0916030534345" y="-280.28169014084506"/>
+        </scene>
+        <!--Bot Check View Controller-->
+        <scene sceneID="isL-F0-12o">
+            <objects>
+                <viewController id="EjV-pk-F0c" customClass="botCheckViewController" customModule="InsideTheVietnameseZodiac" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="F4u-Dr-hdd">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WELCOME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEk-4f-4fL">
+                                <rect key="frame" x="16" y="59" width="361" height="186"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="186" id="3p5-rk-IjN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                <color key="textColor" red="0.68235294120000001" green="0.0" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ESh-Zd-TLd">
+                                <rect key="frame" x="126" y="410" width="140" height="32"/>
+                                <color key="backgroundColor" red="0.68235294120000001" green="0.0" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" name="AccentColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="FACE SCAN"/>
+                                <connections>
+                                    <action selector="signInButtonPressed:" destination="EjV-pk-F0c" eventType="touchUpInside" id="PHq-9d-7VV"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please Press" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UOw-Sz-LLI">
+                                <rect key="frame" x="83" y="360" width="227" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" red="0.68235294120000001" green="0.0" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="to Proceed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AUj-qy-K8f">
+                                <rect key="frame" x="83" y="468" width="227" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" red="0.68235294120000001" green="0.0" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="EAn-Qd-B5l"/>
+                        <color key="backgroundColor" red="0.93333333330000001" green="0.72941176470000002" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dEk-4f-4fL" firstAttribute="top" secondItem="EAn-Qd-B5l" secondAttribute="top" id="2pj-YX-168"/>
+                            <constraint firstItem="dEk-4f-4fL" firstAttribute="leading" secondItem="F4u-Dr-hdd" secondAttribute="leadingMargin" id="3m8-5G-lim"/>
+                            <constraint firstItem="ESh-Zd-TLd" firstAttribute="centerY" secondItem="F4u-Dr-hdd" secondAttribute="centerY" id="DpY-x7-sY7"/>
+                            <constraint firstItem="EAn-Qd-B5l" firstAttribute="bottom" secondItem="ESh-Zd-TLd" secondAttribute="bottom" constant="376" id="Sog-8r-TC9"/>
+                            <constraint firstItem="dEk-4f-4fL" firstAttribute="centerX" secondItem="ESh-Zd-TLd" secondAttribute="centerX" id="d7u-vF-fMy"/>
+                            <constraint firstItem="dEk-4f-4fL" firstAttribute="trailing" secondItem="F4u-Dr-hdd" secondAttribute="trailingMargin" id="jKg-y7-P40"/>
+                            <constraint firstItem="ESh-Zd-TLd" firstAttribute="leading" secondItem="EAn-Qd-B5l" secondAttribute="leading" constant="126" id="kTY-tf-uCk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="t3h-GW-Tc0"/>
+                    <connections>
+                        <segue destination="XKg-QV-MGI" kind="show" identifier="toListController" id="X6c-YT-0bS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4sc-Jc-pux" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1913.740458015267" y="-551.4084507042254"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Z61-1h-0Hc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="XKg-QV-MGI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Lzj-W4-Ve6"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SCE-4o-OXt">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="15T-ga-B90" kind="relationship" relationship="rootViewController" id="DOO-eq-3vj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EcJ-Al-i7G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2872.5190839694656" y="-551.4084507042254"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" red="0.68235294120000001" green="0.0" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+    <resources>
+        <image name="buffalo" width="250" height="250"/>
+        <image name="cat" width="250" height="250"/>
+        <image name="dog" width="250" height="250"/>
+        <image name="dragon" width="250" height="250"/>
+        <image name="goat" width="250" height="250"/>
+        <image name="horse" width="250" height="250"/>
+        <image name="monkey" width="250" height="250"/>
+        <image name="pig" width="250" height="250"/>
+        <image name="rat" width="250" height="250"/>
+        <image name="rooster" width="250" height="250"/>
+        <image name="snake" width="250" height="250"/>
+        <image name="tiger" width="250" height="250"/>
+        <namedColor name="AccentColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
